@@ -35,7 +35,7 @@ function ShoppingListCheckOffService() {
   buyItems.push({name: "apples", quantity: 5});
   buyItems.push({name: "milk", quantity: 4});
   buyItems.push({name: "crackers", quantity: 3});
-  buyItems.push({name: "oranges", quantity: 2});
+  buyItems.push({name: "bananas", quantity: 2});
 
   service.buyItem = function (itemIndex) {
     boughtItems.push(buyItems[itemIndex]);
