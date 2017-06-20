@@ -11,7 +11,6 @@ function ToBuyController(ShoppingListCheckOffService) {
   var buyList = this;
 
   buyList.items = ShoppingListCheckOffService.getBuyItems();
-  buyList.isEmpty = buyList.length === 0;
 
   buyList.buyItem = function (itemIndex) {
     ShoppingListCheckOffService.buyItem(itemIndex);
@@ -24,7 +23,6 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
   var boughtList = this;
 
   boughtList.items = ShoppingListCheckOffService.getBoughtItems();
-  boughtList.isEmpty = boughtList.length === 0;
 }
 
 function ShoppingListCheckOffService() {
@@ -34,10 +32,10 @@ function ShoppingListCheckOffService() {
   var boughtItems = [];
 
   buyItems.push({name: "cookies", quantity: 10});
-  buyItems.push({name: "cookies", quantity: 10});
-  buyItems.push({name: "cookies", quantity: 10});
-  buyItems.push({name: "cookies", quantity: 10});
-  buyItems.push({name: "cookies", quantity: 10});
+  buyItems.push({name: "apples", quantity: 5});
+  buyItems.push({name: "milk", quantity: 4});
+  buyItems.push({name: "crackers", quantity: 3});
+  buyItems.push({name: "oranges", quantity: 2});
 
   service.buyItem = function (itemIndex) {
     boughtItems.push(buyItems[itemIndex]);
@@ -53,4 +51,5 @@ function ShoppingListCheckOffService() {
   }
 
 }
+
 })();
